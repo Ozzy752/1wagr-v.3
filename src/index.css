@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Auto-restored theme variables */
+    --shadow-x: 0px;
+    --shadow-y: 1px;
+    --shadow-blur: 4px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0.2;
+    --shadow-color: #000000;
+    --shadow-2xs: var(--shadow-x) var(--shadow-y) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-xs: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.4);
+    --shadow-md: 0 4px 16px 0 rgba(0,0,0,0.5);
+    --shadow-lg: 0 8px 32px 0 rgba(0,0,0,0.5);
+    --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6) calc(var(--shadow-blur) * 7) calc(var(--shadow-spread) - 5px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8) calc(max(0px, var(--shadow-blur) * 9 - 8px)) calc(var(--shadow-spread) - 12px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 250%), transparent);
+    --shadow: 0 2px 8px 0 rgba(0,0,0,0.5);
+
+    /* Light mode */
+    --background: 40 20% 97%;
+    --foreground: 240 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+    --primary: 36 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 92%;
+    --secondary-foreground: 240 10% 20%;
+    --muted: 240 5% 94%;
+    --muted-foreground: 240 5% 45%;
+    --accent: 36 85% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 88%;
+    --input: 240 5% 94%;
+    --ring: 36 85% 50%;
+    --radius: 0.625rem;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 10%;
+    --sidebar-primary: 36 85% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 94%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 240 6% 88%;
+    --sidebar-ring: 36 85% 50%;
+
+    --chart-1: 36 85% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 280 60% 55%;
+    --chart-4: 200 70% 50%;
+    --chart-5: 0 72% 51%;
+  }
+
+  .dark {
+    --background: 240 10% 6%;
+    --foreground: 40 20% 95%;
+    --card: 240 8% 10%;
+    --card-foreground: 40 20% 95%;
+    --popover: 240 8% 12%;
+    --popover-foreground: 40 20% 95%;
+    --primary: 36 85% 55%;
+    --primary-foreground: 240 10% 6%;
+    --secondary: 240 6% 18%;
+    --secondary-foreground: 40 20% 90%;
+    --muted: 240 6% 14%;
+    --muted-foreground: 240 5% 55%;
+    --accent: 36 85% 55%;
+    --accent-foreground: 240 10% 6%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 18%;
+    --input: 240 6% 14%;
+    --ring: 36 85% 55%;
+
+    --sidebar-background: 240 8% 8%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 36 85% 55%;
+    --sidebar-primary-foreground: 240 10% 6%;
+    --sidebar-accent: 240 6% 14%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 240 6% 16%;
+    --sidebar-ring: 36 85% 55%;
+
+    --chart-1: 36 85% 55%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 280 60% 55%;
+    --chart-4: 200 70% 50%;
+    --chart-5: 0 72% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
